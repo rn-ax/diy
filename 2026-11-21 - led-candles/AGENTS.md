@@ -16,7 +16,8 @@ Battery LED block candles rebuilt so Home Assistant can switch and dim them indi
 
 - The candle in the teardown photos is a North Light LED Pillar Candle (Clas Ohlson 34-2087). It is not the JYSK Dante from the original brief, and other models may have different boards.
 - The candles run on 1.2 V NiMH cells (2.2-2.8 V in use), so battery percentage is derived from voltage per battery type; NiMH stays nearly flat until close to empty.
-- Whether the wick LED flickers by itself is unmeasured. A self-flickering LED cannot be dimmed with PWM and would be replaced with a plain warm-white LED.
+- The original candles flicker realistically, and the rebuilt candle has to match that.
+- The wick LED has two wires, which fits both a plain LED driven by the board's chip and a self-flickering LED with its own chip. Which one it is stays unmeasured until it is powered directly. A self-flickering LED cannot be dimmed with PWM, and the flicker would then be reproduced in software on a plain warm-white LED, with the original's brightness pattern recorded from the original candle as the reference.
 
 ## CAD
 

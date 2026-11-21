@@ -10,6 +10,7 @@ Samuel owns a number of battery LED block candles ([JYSK Dante, sand, 8x10 cm](h
 
 - Home Assistant controls each candle: on/off and brightness, individually and as a group.
 - Home Assistant sees each candle's confirmed state and battery level.
+- The flame flickers as realistically as the original candles do.
 - Listening costs a few uA on average, so battery life is set by how long the LED burns.
 - Per-candle cost of a few euros, plus one shared transmitter.
 - A candle with a dead radio link still behaves safely (see Failsafe).
