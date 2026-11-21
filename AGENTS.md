@@ -24,6 +24,10 @@ Printable parts are modeled in CadQuery, as a Python script whose dimensions are
 
 Create the directory with today's date, write its `AGENTS.md` with the goal and constraints as they are understood so far, and keep that file current as facts are established.
 
+## Personal information
+
+Files in the repository carry no personal information: no names, no locations, and no metadata that identifies a person or a device. The person the experiments are for is called "the user". Photos have their metadata stripped before they are committed.
+
 ## Changes
 
 All changes reach `main` through a pull request. A pull request covers one experiment.
