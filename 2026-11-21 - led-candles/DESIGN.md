@@ -4,7 +4,7 @@ Status: draft for approval. Nothing is built.
 
 ## Intent
 
-Samuel owns a number of battery LED block candles ([JYSK Dante, sand, 8x10 cm](https://jysk.se/inredning/dekoration/led-ljus/led-blockljus-dante-o8xh10cm-sand)) with an on/off/8h-timer switch, powered by 2xAA or 3xAAA. The goal is to switch and dim them from Home Assistant (dusk-to-bedtime schedules per room) using cheap parts, with a battery life close to what the candles have today.
+The user owns a number of battery LED block candles ([JYSK Dante, sand, 8x10 cm](https://jysk.se/inredning/dekoration/led-ljus/led-blockljus-dante-o8xh10cm-sand)) with an on/off/8h-timer switch, powered by 2xAA or 3xAAA. The goal is to switch and dim them from Home Assistant (dusk-to-bedtime schedules per room) using cheap parts, with a battery life close to what the candles have today.
 
 ## Goals
 
@@ -28,7 +28,7 @@ Samuel owns a number of battery LED block candles ([JYSK Dante, sand, 8x10 cm](h
 
 ## Constraints
 
-- EU sub-GHz rules (Åland/Finland): the 868 MHz SRD band is duty-cycle limited, so commands are few and short.
+- EU sub-GHz rules: the 868 MHz SRD band is duty-cycle limited, so commands are few and short.
 - The CC1101 accepts at most 3.6 V. 2xAA (about 2.0-3.2 V) is fine directly. 3xAAA (up to 4.5 V) needs an LDO or regulator, or a rebuild as 2xAAA.
 - The original innards need not be kept. The candle shell is reused and the base is a custom 3D-printed part holding the battery holder, MCU board, CC1101 module, manual button and the LED wiring, sized to the shell opening.
 - Every part is ordered from AliExpress, so the design uses only commodity parts with several sellers (CC1101 breakout modules, CH32V003/ATtiny-class MCUs, small MOSFETs, ESP32 boards). Cheap CC1101 modules come in 433 and 868 MHz variants and clones exist, so the first order is a handful of modules whose sleep and wake-on-radio current is measured before ordering in volume. Parts that need a specific unusual chip or a hard-to-source antenna are avoided.
@@ -54,7 +54,7 @@ Hub:     Home Assistant <-> ESP32 + CC1101 (ESPHome)
 - A manual button toggles the candle with no radio involved.
 - The ESPHome side exposes each candle to Home Assistant as a light entity plus a battery sensor.
 
-## Decisions I made (not yet confirmed with Samuel)
+## Decisions I made (not yet confirmed with the user)
 
 - 868 MHz rather than 433 MHz (433 MHz modules are the more common AliExpress listing, so the seller's stated frequency is checked, and 433 MHz stays an acceptable fallback within its own duty-cycle rules).
 - Failsafe: with no command for 12 h, a lit candle switches itself off.

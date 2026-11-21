@@ -74,7 +74,7 @@ Makefile                            builds and runs host tests
 - [ ] **Step 1: Order** 5 CC1101 breakouts (868 MHz where listed, check the seller's stated frequency) and 5 candidate MCU boards (CH32V003 and ATtiny-class).
 - [ ] **Step 2: Measure** each module's sleep current and its average current in wake-on-radio mode at a 1 s poll interval, from a 3.0 V supply with a uA-capable meter. Record results per module.
 - [ ] **Step 3: Measure** the candidate MCU's deep-sleep current with the CC1101 attached and the interrupt pin wired.
-- [ ] **Step 4: Decide** MCU and module and write the decision plus the combined standby current in `docs/measurements.md`. Go if combined standby is about 30 uA or less; otherwise stop and report to Samuel with the numbers.
+- [ ] **Step 4: Decide** MCU and module and write the decision plus the combined standby current in `docs/measurements.md`. Go if combined standby is about 30 uA or less; otherwise stop and report to the user with the numbers.
 
 ### Task 3: Protocol library
 
