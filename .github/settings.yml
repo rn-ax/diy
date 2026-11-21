@@ -1,0 +1,5 @@
+_extends: poppycock
+
+repository:
+  name: diy
+  description: Hands-on DIY experiments, one directory per experiment
