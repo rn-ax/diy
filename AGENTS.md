@@ -16,9 +16,17 @@ Experiments are independent of each other and import nothing across directories.
 
 An experiment that outgrows the repository graduates to its own repository under `rn-ax`. Its directory is then replaced by a README that links to the new repository.
 
+## CAD
+
+Printable parts are modeled in CadQuery, as a Python script whose dimensions are named variables at the top. The exported STEP and STL files are committed next to the script. Tests check dimensions on the exported geometry, so they hold if the modeling tool changes.
+
 ## Starting an experiment
 
 Create the directory with today's date, write its `AGENTS.md` with the goal and constraints as they are understood so far, and keep that file current as facts are established.
+
+## Personal information
+
+Files in the repository carry no personal information: no names, no locations, and no metadata that identifies a person or a device. The person the experiments are for is called "the user". Photos have their metadata stripped before they are committed.
 
 ## Changes
 
