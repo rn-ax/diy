@@ -1,6 +1,6 @@
 # Transmit stage on the breadboard
 
-`transmit-stage.schematex` is the source of the breadboard drawing (half-size board, 30 columns). It is rendered with the `standard-diagram` skill (`render-diagram <file>`).
+`transmit-stage.schematex` is the source of the breadboard drawing (half-size board, 30 columns). It is rendered with the `schematex` skill (`render-diagram <file>`).
 
 Two IR LEDs in series, switched by a 2N2222A transistor, so the LEDs carry far more current than a board pin can give.
 
