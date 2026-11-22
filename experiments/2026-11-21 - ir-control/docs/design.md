@@ -1,4 +1,4 @@
-# IR transmitter: design
+# IR control: design
 
 Status: draft for approval. Nothing is built.
 

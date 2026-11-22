@@ -1,12 +1,12 @@
-# IR transmitter
+# IR control
 
-A hidden, USB-C-powered ESP32 infrared transmitter, one per room, on a 3D-printed tray that is glued inside any hollow object (a box, a statue base) with only the IR LED visible outside. Home Assistant sends recorded IR commands through it, replacing the room's remote controls.
+Infrared control of the home: recording remote-control signals (receiving) and replaying them (transmitting). The transmitting side is a hidden, USB-C-powered ESP32 infrared transmitter, one per room, on a 3D-printed tray that is glued inside any hollow object (a box, a statue base) with only the IR LED visible outside. Home Assistant sends recorded IR commands through it, replacing the room's remote controls.
 
 `docs/design.md` holds the design and the open decisions, and `docs/superpowers/plans/` the implementation plan. The parts the user already owns are in the DIY parts inventory (the `diy-parts` skill); check it before suggesting a part to buy.
 
 ## Constraints
 
-- The transmitter is transmit-only. Commands are recorded with the existing copycat app (`monocoque/apps/copycat`), which stores each button as a Pronto code and generates the ESPHome config for a transmit-only device.
+- The hidden room transmitter is transmit-only, and the receiving side stays on a separate recorder board. Commands are recorded with the existing copycat app (`monocoque/apps/copycat`), which stores each button as a Pronto code and generates the ESPHome config for a transmit-only device.
 - One transmitter per room. It must be able to reach every IR device in the room, and a radio transmitter (433/868 MHz) may be added later, so the tray leaves room for one more small module.
 - Power is USB-C from a nearby charger, with the cable leaving through a small notch or hole. There is no battery.
 - The hollow objects are easy to drill and saw. The tray is glued in place. The board module is the same for every object, and only the plate outline is per object: a rectangle with enough glue area for a flat floor (the box), or an outline that fits the cavity exactly (the statue base).
