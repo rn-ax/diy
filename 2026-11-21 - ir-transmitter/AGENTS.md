@@ -15,6 +15,6 @@ A hidden, USB-C-powered ESP32 infrared transmitter, one per room, on a 3D-printe
 ## Facts established
 
 - The existing copycat devices are ESP32 DevKit v1 boards with an HX-53 IR LED module on GPIO21, an RMT symbol buffer of 256, and the `transmit_pronto` API service. Fan remote codes are 136-168 symbols long.
-- The HX-53 IR LED module on the existing copycat devices is too weak in practice, and the user has bought replacement components for a stronger transmit stage. Phase 1 (a working breadboard with receiver and transmitter) has not been reached yet, so the range of the new stage is unmeasured.
+- The transmitters tried so far (the HX-53 IR LED module on the existing copycat devices) were too weak: they very rarely managed to control the ceiling lamp. The user ordered a 940 nm IR LED and photodiode set (3 mm and 5 mm) for a stronger transmit stage. The IR receiver on the copycat recorder already works, and the sensor kit holds a spare 3-pin IR receiver module. A breadboard exists with an ESP32 HW-394 board (WROOM-32D, USB-C), an IR receiver module and two IR LEDs; its circuit and the range of the new stage are not yet documented or measured.
 - The two example objects are a hinged presentation box of roughly 15 x 11 x 6 cm and the hollow base of a statue with a seam that can be cut open.
 - A DevKit v1 board has a micro-USB port, so a USB-C board is a different board and its RMT capability for long codes has to be verified with a real fan code.
