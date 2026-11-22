@@ -1,0 +1,21 @@
+breadboard
+board: half
+title: IR transmit stage
+
+// Two IR LEDs in series, switched by a 2N2222A. 5V -> R1 -> D1 -> D2 -> Q1 collector; Q1 emitter -> GND.
+// Q1 is drawn as a 3-pin header: collector column 9, base column 10, emitter column 11 (row i).
+// D1 and D2: anode toward 5V (D1: top half 6e, D2: left end 6h), cathode on the far end.
+parts
+  esp: mcu esp32 @beside-left
+  r1: resistor 47 @3c..6c
+  d1: led white @6e..6f
+  d2: led white @6h..9h
+  q1: header pins=3 @9i
+  r2: resistor 1k @10g..14g
+
+wires
+  esp:VIN    --red--    @+t1
+  esp:GND    --black--  @-b1
+  esp:GPIO21 --yellow-- @14h
+  @+t3       --red--    @3a
+  @11j       --black--  @-b11
