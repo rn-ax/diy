@@ -31,7 +31,7 @@ The user owns a number of battery LED block candles (for example the North Light
 - The MCU runs down to about 2 V, which rules out parts that need 2.7 V or more (the CH32V003).
 - The original plastic base is reused as it is, with its battery bay and exposed contacts. The original board is removed.
 - The MCU and CC1101 sit in the hollow shell above the base, on short wires to the battery contacts, with the antenna clear of the cells.
-- The original slide switch window holds a small slide switch that cuts the battery, so OFF means zero drain.
+- The original switch window holds a small SPST switch from the user's stock that cuts the battery, so OFF means zero drain.
 - Every part is ordered from AliExpress, so the design uses only commodity parts with several sellers (CC1101 breakout modules, small ARM or AVR MCUs, small MOSFETs, ESP32 boards). Cheap CC1101 modules come in 433 and 868 MHz variants and clones exist, so the first order is a handful of modules whose sleep and wake-on-radio current is measured before ordering in volume. Parts that need a specific unusual chip or a hard-to-source antenna are avoided.
 
 ## Approaches considered

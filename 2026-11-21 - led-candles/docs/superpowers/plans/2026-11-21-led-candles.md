@@ -20,7 +20,7 @@
 - CC1101 accepts at most 3.6 V; 2xAA is fine directly, 3xAAA needs an LDO or a rebuild as 2xAAA.
 - Poll interval about 1 s.
 - The original plastic base and its battery contacts are reused; the MCU and CC1101 sit in the hollow shell with the antenna clear of the cells.
-- A small slide switch in the original switch window cuts the battery, so OFF means zero drain.
+- A small SPST switch from the user's stock in the original switch window cuts the battery, so OFF means zero drain.
 - The MCU runs down to about 2 V (NiMH cells run 2.2-2.8 V).
 - Battery level is reported as measured voltage; the hub converts it to a percentage.
 - Out of scope: rechargeable power, the candle's own timer, security beyond a network ID.
@@ -153,11 +153,11 @@ Makefile                            builds and runs host tests
 **Interfaces:**
 - Consumes: the candle image from Task 5 and the hub from Task 6.
 
-- [ ] **Step 1: Rebuild one candle.** Keep the original base and its battery contacts, remove the original board, and mount the MCU, CC1101 and MOSFET-driven LED in the hollow shell with the antenna clear of the cells. Fit a small slide switch in the original switch window as a battery cut, and wire everything on short leads.
+- [ ] **Step 1: Rebuild one candle.** Keep the original base and its battery contacts, remove the original board, and mount the MCU, CC1101 and MOSFET-driven LED in the hollow shell with the antenna clear of the cells. Fit a small SPST switch from stock in the original switch window as a battery cut, and wire everything on short leads.
 - [ ] **Step 2: Verify** from Home Assistant: on, off, dim, flicker, and that the light entity shows confirmed state after the REPORT arrives.
 - [ ] **Step 3: Verify a corrupted packet and a foreign network:** transmit a packet with a wrong sync word and a packet with a broken CRC from a second radio; the candle must not change state.
 - [ ] **Step 4: Measure** average current over 24 h in idle and lit states, latency from Home Assistant to light, and range through two walls; record results in `docs/measurements.md`.
-- [ ] **Step 5: Verify the slide switch** cuts the battery: with it OFF the candle draws no current and ignores commands, and with it ON the candle responds again.
+- [ ] **Step 5: Verify the battery switch** cuts the battery: with it OFF the candle draws no current and ignores commands, and with it ON the candle responds again.
 
 ### Task 8: Rollout
 
